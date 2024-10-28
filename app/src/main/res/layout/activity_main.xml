@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtCliente"
+        android:layout_width="241dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="17dp"
+        android:hint="@string/edtCliente"
+        app:layout_constraintBottom_toTopOf="@+id/edtNumConta"
+        app:layout_constraintEnd_toStartOf="@+id/btnPesquisar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgTipoConta"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <EditText
+        android:id="@+id/edtNumConta"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="13dp"
+        android:hint="@string/edtNumConta"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/edtLimiteOuDia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPesquisar" />
+
+    <EditText
+        android:id="@+id/edtSaldo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="26dp"
+        android:hint="@string/edtSaldo"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/btnIncluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLimiteOuDia" />
+
+    <RadioGroup
+        android:id="@+id/rgTipoConta"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnPesquisar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbEspecial"
+            android:layout_width="146dp"
+            android:layout_height="48dp"
+            android:text="@string/rbEspecial"
+            tools:layout_editor_absoluteX="224dp"
+            tools:layout_editor_absoluteY="35dp" />
+
+        <RadioButton
+            android:id="@+id/rbPoupanca"
+            android:layout_width="153dp"
+            android:layout_height="48dp"
+            android:text="@string/rbPoupanca" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edtLimiteOuDia"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="12dp"
+        android:hint="@string/edtLimiteOuDia"
+        android:inputType="numberDecimal"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtSaldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtNumConta" />
+
+    <EditText
+        android:id="@+id/edtValor"
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="23dp"
+        android:hint="@string/edtValor"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/btnSacar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIncluir" />
+
+    <Button
+        android:id="@+id/btnIncluir"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/btnIncluir"
+        app:layout_constraintBottom_toTopOf="@+id/edtValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSaldo" />
+
+    <Button
+        android:id="@+id/btnSacar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/btnSacar"
+        app:layout_constraintBottom_toTopOf="@+id/btnMostrarSaldo"
+        app:layout_constraintEnd_toStartOf="@+id/btnDepositar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtValor" />
+
+    <Button
+        android:id="@+id/btnDepositar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="55dp"
+        android:text="@string/btnDepositar"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSacar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSacar"
+        app:layout_constraintTop_toTopOf="@+id/btnSacar" />
+
+    <Button
+        android:id="@+id/btnMostrarSaldo"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/btnMostrarSaldo"
+        app:layout_constraintBottom_toTopOf="@+id/tvSaldo"
+        app:layout_constraintEnd_toStartOf="@+id/tvSaldo"
+        app:layout_constraintStart_toStartOf="@+id/tvSaldo"
+        app:layout_constraintTop_toBottomOf="@+id/btnSacar" />
+
+    <Button
+        android:id="@+id/btnPesquisar"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/btnPesquisar"
+        app:layout_constraintBottom_toTopOf="@+id/edtNumConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtCliente"
+        app:layout_constraintTop_toBottomOf="@+id/rgTipoConta" />
+
+    <TextView
+        android:id="@+id/tvSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMostrarSaldo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="376dp"
+        android:layout_height="26dp"
+        android:text="KELVIN SANTOS GUIMARAES - RA:	1110482313029"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="11dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

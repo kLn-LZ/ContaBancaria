@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ContaBancaria</string>
+    <string name="edtCliente">Nome do Cliente</string>
+    <string name="edtNumConta">Número da Conta</string>
+    <string name="edtLimiteOuDia">Limite (Conta Especial) ou Dia de Rendimento (Conta Poupança)</string>
+    <string name="edtSaldo">Saldo Inicial</string>
+    <string name="edtValor">Valor</string>
+    <string name="btnIncluir">Incluir Conta</string>
+    <string name="btnSacar">Sacar</string>
+    <string name="btnDepositar">Depositar</string>
+    <string name="btnMostrarSaldo">Mostrar Saldo</string>
+    <string name="btnPesquisar">Pesquisar</string>
+    <string name="rbPoupanca">Conta Poupança</string>
+    <string name="rbEspecial">Conta Especial</string>
+</resources>
